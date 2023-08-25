@@ -1,0 +1,29 @@
+<div class="body">
+  <div class="login">
+    <mat-spinner diameter="50" class="spinner" *ngIf="loading"></mat-spinner>
+   
+    <form *ngIf="!loading" [formGroup]="myForm"(ngSubmit)="ingresar()"  >
+      <img src="./assets/img1.png" width="100%" sizes="">
+        <div class="mb-3">
+            <label  id="usu" for="exampleFormControlInput1" class="form-label">USUARIO</label>
+            <input formControlName="usuario"  class="ancho" type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ingresa tu usuario">
+            <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                Usuario obligatorio
+              </div>
+        </div><br>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">CONTRASEÑA</label>
+            <input formControlName="password"  class="ancho" type="password" class="form-control" id="exampleFormControlInput1" placeholder="Ingresa tu contraseña">
+            <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                Contraseña Obligatoria
+              </div>
+        </div><br>
+          <div class="mb-3">
+            <button type="submit" class="ancho" class="btn btn-success" [disabled]="myForm.invalid">Ingresar</button>
+          </div>
+      </form>
+  </div>
+   
+
+</div>
+

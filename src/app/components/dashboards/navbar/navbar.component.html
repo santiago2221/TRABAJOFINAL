@@ -1,0 +1,36 @@
+<nav class="navbar navbar-dark bg-primary fixed-top" data-bs-theme="dark">
+  <div class="bg-primary">
+  <div class="container-fluid"></div>
+<a class="navbar-brand" [routerLink]="['/dashboards']">TIENDA DE DETALLES SEÑOR GATO</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <br>
+  <button id="alinear" routerLink="logout" mat-icon-button class="example-icon bg-primary" aria-label="Example icon-button with share icon">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h3 class="offcanvas-title" id="offcanvasNavbarLabel">Tienda Señor Gato</h3>
+         
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['usuarios']"  >Perfiles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="productos">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="maquillaje">Maquillaje</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="papeleria">Papeleria</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+ 
+  </nav>

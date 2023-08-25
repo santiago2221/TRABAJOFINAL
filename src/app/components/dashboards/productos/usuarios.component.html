@@ -1,0 +1,42 @@
+<br>
+<br>
+<br>
+<div class="container">
+  <mat-toolbar>
+    <p>usuarios Tienda Señor Gato</p>
+    <div class="example-spacer"></div>
+    <button mat-raised-button color="primary" routerLink="/dashboards/crear-usuario">Agregar Usuario</button>
+  </mat-toolbar>
+  <br>
+  <div *ngIf="listusuarios.length > 0">
+    <mat-form-field>
+    
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+    </mat-form-field>
+    <table  class="mat-elevation-z8">
+      <thead>
+        <tr>
+          <th>Usuario</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Cargo</th>
+	        
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let empleado of Empleados; let iControl =index">
+          <td>{{empleado.usuario}}</td>
+          <td>{{empleado.nombres}}</td>
+          <td>{{empleado.apellidos}}</td>
+          <td>{{empleado.sexo}}</td>
+          <td > <button class="btn btn-danger"  (click)="borrarEmpleados(empleado.id, iControl)">Eliminar</button></td>
+
+        </tr>
+      </tbody>
+    </table>
+  
+    
+  
+
+  
