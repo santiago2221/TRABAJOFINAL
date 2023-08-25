@@ -1,0 +1,52 @@
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <mat-toolbar>
+        <p>Crear Producto de Maquillaje</p>
+      </mat-toolbar>
+      <br>
+      <mat-card>
+        <mat-card-content>
+            <form [formGroup]="formp" (ngSubmit)="agregarMaquillaje()" >
+                
+                    <mat-grid-list cols="4" rowHeight="100px">
+                        <mat-grid-tile colspan="1" rowspan="1" >
+                            <mat-form-field class="ancho">
+                                <mat-label>ID</mat-label>
+                                <input matInput formControlName="id">
+                              </mat-form-field>
+                        </mat-grid-tile>
+                        
+                        <mat-grid-tile colspan="1" rowspan="1" >
+                            <mat-form-field class="ancho">
+                                <mat-label>Nombre</mat-label>
+                                <input matInput formControlName="nombre">
+                              </mat-form-field>
+                        </mat-grid-tile>
+                        <mat-grid-tile colspan="1" rowspan="1" >
+                            <mat-form-field class="ancho">
+                                <mat-label>Descripción</mat-label>
+                                <input matInput formControlName="descripcion">
+                              </mat-form-field>
+                        </mat-grid-tile>
+                        <mat-grid-tile colspan="1" rowspan="1">
+                            <mat-form-field class="ancho">
+                                <mat-label>Proveedor</mat-label>
+                                <input matInput formControlName="provedor">
+                              </mat-form-field>
+                        </mat-grid-tile>
+                        <mat-grid-tile colspan="1" rowspan="1" >
+                            <div class="centro">
+                                <button type="submit" mat-raised-button color="primary" [disabled]="formp.invalid" class="mx-2">Aceptar</button>
+                                <button  routerLink="/dashboards/maquillaje" mat-raised-button color="primary" class="mx-2" >cancelar</button>
+                            </div>
+                            
+                        </mat-grid-tile>
+                    </mat-grid-list>
+                  
+            </form>
+        </mat-card-content>
+      </mat-card>
+</div>
