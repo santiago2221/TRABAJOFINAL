@@ -1,0 +1,35 @@
+<br>
+<br>
+<br>
+<div class="container">
+  <mat-toolbar>
+    <p>Papeleria Tienda Señor Gato</p>
+    <div class="example-spacer"></div>
+    <button mat-raised-button color="primary" routerLink="/dashboards/crear-papeleria" class="mx-2">Agregar Producto</button>
+    <button mat-raised-button color="primary" (click)="createPDF2()" class="mx-2">PDF</button>
+    <button mat-raised-button color="primary" (click)="createExcel()" class="mx-2">Excel</button>
+  </mat-toolbar>
+  <br>
+    <table  class="mat-elevation-z8">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Producto</th>
+          <th>Categoría</th>
+          <th>Proveedor</th>
+	        
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let papeleria of Papeleria; let iControl =index">
+          <td>{{papeleria.id}}</td>
+          <td>{{papeleria.producto}}</td>
+          <td>{{papeleria.categoria}}</td>
+          <td>{{papeleria.provedor}}</td>
+          <td > <button class="btn btn-danger"  (click)="borrarPapeleria(papeleria.id, iControl)">Eliminar</button></td>
+
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <button  mat-raised-button color="primary" (click)="refreshPage()">Actualizar</button>
